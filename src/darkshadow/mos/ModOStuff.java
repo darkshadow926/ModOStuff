@@ -17,9 +17,10 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import darkshadow.mos.block.BlockOstuff;
+import darkshadow.mos.lib.Reference;
 
-@Mod(modid="MOS", name="DarkShadow's O'Stuff Mod", version="1.0")
-@NetworkMod(clientSideRequired=true, serverSideRequired=true)
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
+@NetworkMod(clientSideRequired=true, serverSideRequired=false)
 
 public class ModOStuff {
 
@@ -33,7 +34,7 @@ public class ModOStuff {
 				.func_111022_d("mos:OStuff");
 	
 	// The instance of your mod that Forge uses.
-	@Instance("ModOStuff")
+	@Instance(Reference.MOD_ID)
 	public static ModOStuff instance;
 
 	// Says where the client and server 'proxy' code is loaded.
