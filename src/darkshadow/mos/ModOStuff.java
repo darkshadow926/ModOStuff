@@ -1,31 +1,27 @@
-package darkshadow.carmod;
+package darkshadow.mos;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.block.material.Material;
-import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Init;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import darkshadow.mos.block.BlockOstuff;
 
-@Mod(modid="CarMod", name="DarkShadow's Car Mod", version="0.1")
-@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+@Mod(modid="MOS", name="DarkShadow's O'Stuff Mod", version="1.0")
+@NetworkMod(clientSideRequired=true, serverSideRequired=true)
 
-
-public class CarMod {
+public class ModOStuff {
 
 	public final static Block Ostuff = 
 			new BlockOstuff(254, Material.rock)
@@ -34,14 +30,14 @@ public class CarMod {
 				.setLightValue(0.5F)
 				.setCreativeTab(CreativeTabs.tabBlock)
 				.setUnlocalizedName("Ostuff")
-				.func_111022_d("carmod:Ostuff");
+				.func_111022_d("mos:OStuff");
 	
 	// The instance of your mod that Forge uses.
-	@Instance("CarMod")
-	public static CarMod instance;
+	@Instance("ModOStuff")
+	public static ModOStuff instance;
 
 	// Says where the client and server 'proxy' code is loaded.
-	@SidedProxy(clientSide="darkshadow.carmod.client.ClientProxy", serverSide="darkshadow.carmod.CommonProxy")
+	@SidedProxy(clientSide="darkshadow.mos.client.ClientProxy", serverSide="darkshadow.mos.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler
@@ -59,7 +55,7 @@ public class CarMod {
 		// End Basic Blocks
 		
 
-		GameRegistry.registerWorldGenerator(new CarModWorldGenerator());
+		GameRegistry.registerWorldGenerator(new ModOStuffWorldGenerator());
 
 		ItemStack leatherStack = new ItemStack(Item.leather);
 		ItemStack ironStack = new ItemStack(Item.ingotIron);
@@ -88,4 +84,5 @@ public class CarMod {
 	public void postInit(FMLPostInitializationEvent event) {
 		// Stub Method
 	}
+	
 }

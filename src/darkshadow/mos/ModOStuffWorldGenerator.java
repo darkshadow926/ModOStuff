@@ -1,4 +1,4 @@
-package darkshadow.carmod;
+package darkshadow.mos;
 
 import java.util.Random;
 
@@ -7,7 +7,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class CarModWorldGenerator implements IWorldGenerator {
+public class ModOStuffWorldGenerator implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -33,7 +33,7 @@ public class CarModWorldGenerator implements IWorldGenerator {
 			int randPosX = chunkX + rand.nextInt(16);
 			int randPosY = rand.nextInt(128);
 			int randPosZ = chunkZ + rand.nextInt(16);
-			(new WorldGenMinable(CarMod.Ostuff.blockID, 17)).generate(world, rand,randPosX, randPosY, randPosZ);
+			(new WorldGenMinable(ModOStuff.Ostuff.blockID, 17)).generate(world, rand,randPosX, randPosY, randPosZ);
 		}
 	}
 

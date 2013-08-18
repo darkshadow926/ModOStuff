@@ -1,4 +1,4 @@
-package darkshadow.carmod;
+package darkshadow.mos;
 
 
 public class CommonProxy {

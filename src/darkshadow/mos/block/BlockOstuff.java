@@ -1,10 +1,11 @@
-package darkshadow.carmod;
+package darkshadow.mos.block;
 
 
 import java.util.Random;
+
+import darkshadow.mos.ModOStuff;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.block.material.Material;
 
 
@@ -15,11 +16,11 @@ public class BlockOstuff extends Block {
 	}
 	
 	public void registerIcons(IconRegister par1IconRegister){
-		this.blockIcon = par1IconRegister.registerIcon("carmod:OStuff");
+		this.blockIcon = par1IconRegister.registerIcon("mos:OStuff");
 	}
 	
 	public int idDropped(int par1, Random random, int par2) {
-		return CarMod.Ostuff.blockID;      
+		return ModOStuff.Ostuff.blockID;      
 	}
 
 
