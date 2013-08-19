@@ -1,4 +1,4 @@
 ModOStuff
 =========
 
-Adds O'Stuff to minecraft
+Adds O'Stuff to Minecraft
