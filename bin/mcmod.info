@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MOS",
+  "name": "DarkShadow's O'Stuff Mod",
+  "description": "Adds O'Stuff to Minecraft",
+  "version": "1.0",
+  "url": "www.github.com/darkshadow926/ModOStuff",
+  "updateUrl": "",
+  "authorList": ["DarkShadow926", "Cortfrey"],
+  "credits": "",
+  "logoFile": "/assets/mos/textures/logo/OStuff.png",
+  "screenshots": [  ],
+  "parent":"",
+  "dependencies": [  ]
+}
+]

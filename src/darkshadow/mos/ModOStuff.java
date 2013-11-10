@@ -31,7 +31,7 @@ public class ModOStuff {
 				.setLightValue(0.5F)
 				.setCreativeTab(CreativeTabs.tabBlock)
 				.setUnlocalizedName("Ostuff")
-				.func_111022_d("mos:OStuff");
+				.setTextureName("mos:OStuff");
 	
 	// The instance of your mod that Forge uses.
 	@Instance(Reference.MOD_ID)
@@ -68,11 +68,11 @@ public class ModOStuff {
 
 		GameRegistry.addRecipe(new ItemStack(Item.saddle), "xxx", "xyx", "y y",
                 'x', leatherStack, 'y', ironStack);
-		GameRegistry.addRecipe(new ItemStack(Item.field_111215_ce), "  x", "xyx", "xxx",
+		GameRegistry.addRecipe(new ItemStack(Item.horseArmorIron), "  x", "xyx", "xxx",
                 'x', ironStack, 'y', greyWoolStack);
-		GameRegistry.addRecipe(new ItemStack(Item.field_111216_cf), "  x", "xyx", "xxx",
+		GameRegistry.addRecipe(new ItemStack(Item.horseArmorGold), "  x", "xyx", "xxx",
                 'x', goldStack, 'y', brownWoolStack);
-		GameRegistry.addRecipe(new ItemStack(Item.field_111213_cg), "  x", "xyx", "xxx",
+		GameRegistry.addRecipe(new ItemStack(Item.horseArmorDiamond), "  x", "xyx", "xxx",
                 'x', diamondStack, 'y', cyanWoolStack);
 		
 //		GameRegistry.addShapelessRecipe(brownWoolStack, new ItemStack(Block.dirt));
